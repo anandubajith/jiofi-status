@@ -45,13 +45,14 @@ app.on('ready', function(){
         {
             label: 'About',
             click: function() {
-                open("https://anandu.net/jiofi-status")
+                open("https://anandu.net/")
             }
         },
         {
             label: 'Quit',
-            accelerator: 'Ctrl+W',
-            selector: 'terminate:',
+            // accelerator: 'Ctrl+W',
+            // selector: 'terminate:',
+            click: app.quit
         }
     ]);
 
@@ -62,5 +63,5 @@ app.on('ready', function(){
 
 
     updateData();
-    var requestLoop = setInterval(updateData, 10000)
+    setInterval(updateData, 10000)
 });
